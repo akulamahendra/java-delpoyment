@@ -15,5 +15,5 @@
           |
             systemctl start tomcat10;
             systemctl enable tomcat10;
-            systemctl status tomact10;
+            systemctl status tomcat10;
 
