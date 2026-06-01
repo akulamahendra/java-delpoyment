@@ -16,7 +16,7 @@ resource "aws_instance" "myserver" {
 
     availability_zone  = "ap-south-1a"
     ami    = "ami-0685bcc683dadb6b9"
-    instance_type = "t3.micro"
+    instance_type = "c7i-flex.large"
     key_name = "docker"
     vpc_security_group_ids = [ aws_security_group.mysg.id ]
 
