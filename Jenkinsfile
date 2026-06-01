@@ -10,7 +10,7 @@ pipeline {
    stages{
         stage('clone repository'){
             steps{
-                git ''
+                git 'https://github.com/akulamahendra/java-delpoyment.git'
             }
         }
         
@@ -29,7 +29,7 @@ pipeline {
                 sh 'terraform apply'
             }
         }
-        stage('sleep 30'){
+        stage('sleep 180'){
             steps{
                 sh 'sleep 180'
             }
