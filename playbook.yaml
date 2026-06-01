@@ -1,0 +1,19 @@
+- hosts: all
+  remote_user: ec2-user
+  become: yes
+  tasks:
+    - name : "install java"
+      shell:
+        cmd:
+          |
+            yum update && yum upgrade -y;
+            yum install maven -y;
+            yum install tomcat10 -y;
+    - name: "start and enable tomcat10"
+      shell:
+        cmd:
+          |
+            systemctl start tomcat10;
+            systemctl enable tomcat10;
+            systemctl status tomact10;
+
