@@ -10,6 +10,7 @@
             yum install java-21-amazon-corretto -y;
             yum install maven -y;
             yum install tomcat10 -y;
+            yum install git -y;
     - name: "start and enable tomcat10"
       shell:
         cmd:
